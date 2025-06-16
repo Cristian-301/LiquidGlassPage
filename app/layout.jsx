@@ -1,8 +1,5 @@
 import './globals.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import LenisProvider from '@/components/LenisProvider';
-import AOSInit from '@/components/AOSInit';
 import { generateSEOMetadata } from "@/components/Metadata";
 
 export const metadata = generateSEOMetadata({
@@ -33,8 +30,6 @@ export default function RootLayout({children,}) {
     <html lang="it">
       <body className={""}>
         <LenisProvider>
-          <AOSInit />
-          {/* <Navbar/> */}
           {children}
         </LenisProvider>
       </body>

@@ -3,7 +3,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { GlassCard } from "@developer-hub/liquid-glass";
-import BgImage from "@/public/assets/herosection/sky.webp";
+import BgImage from "@/public/assets/herosection/4.png";
+import Snippets from "@/components/Snippets";
 
 const ImageFollow = () => {
   const containerRef = useRef(null);
@@ -78,25 +79,10 @@ const ImageFollow = () => {
       }}
     >
       {/* Fixed image */}
-      <Image
-        src="/assets/lingotti/Retro_kinegram.webp"
-        width={500}
-        height={500}
-        alt="lingotto argor herause"
-        className="hidden"
-        style={{
-          position: "fixed",
-          top: "50%",
-          left: imageLeft,
-          transform: `translate(-50%, -50%) ${
-            rotateImage ? "rotateY(180deg)" : ""
-          }`,
-          transition: "left 1s ease, transform 1s",
-        }}
-      />
 
       {/* GlassCard */}
       <GlassCard
+      shadowMode={false}
         style={{
           position: "fixed",
           top: "50%",
@@ -107,11 +93,11 @@ const ImageFollow = () => {
           }`,
           transition: "left 1s ease, transform 1s",
         }}
-        className="hidden md:block"
+        className=""
       >
-        <div className="flex flex-col items-center text-center space-y-4">
+        <div className="flex flex-col items-center text-center space-y-4 p-5">
           <Image
-            src="/assets/lingotti/Retro_kinegram.webp"
+            src="https://www.lorem-johnny.com/api/random-image"
             alt="Kinegram Lingotto"
             width={100}
             height={100}
@@ -128,18 +114,6 @@ const ImageFollow = () => {
         </div>
       </GlassCard>
 
-      {/* Fallback for small screens */}
-      {width < 700 && (
-        <div className="fade-lingotto">
-          <Image
-            src="/assets/lingotti/Retro_kinegram.webp"
-            width={500}
-            height={500}
-            alt="lingotto argor herause"
-          />
-        </div>
-      )}
-
       {/* Sections */}
       {[1, 2, 3, 4, 5].map((n) => (
         <div
@@ -150,62 +124,40 @@ const ImageFollow = () => {
           }`}
         >
           <div className="w-full lg:w-2/3 text-left lg:pe-56 lg:px-28 p-4">
-            <h4
-              className="lg:text-6xl text-slate-50 font-semibold"
-              data-aos={width > 800 ? "fade-up" : "fade-in"}
-              data-aos-duration="3000"
-            >
-              {n === 1 &&
-                "Ogni lingotto è un mattone che costruisce il tuo futuro"}
-              {n === 2 &&
-                "Careisgold è impegnata nel fornire solo il meglio ai propri clienti"}
-              {n === 3 && "I migliori lingotti d’oro puro certificati"}
-              {n === 4 && "Filiera etica"}
-              {n === 5 &&
-                "La sicurezza è tuo diritto e una nostra responsabilità"}
-            </h4>
-            <div
-              className="text-md lg:text-lg mt-4 mb-10 text-slate-50"
-              data-aos="fade-in"
-              data-aos-duration="3000"
-            >
-              {/* Content text for each section */}
-              {n === 1 && (
-                <p>
-                  Careisgold offre solo lingotti che rispecchiano la massima
-                  qualità disponibile sul mercato... <br />
-                  <b>Lingotti di purezza 999,9‰ Good Delivery.</b>
-                </p>
-              )}
-              {n === 2 && (
-                <p>
-                  Collaboriamo con partner d’eccellenza per la produzione dei
-                  lingotti d’oro... <br />
-                  Fiducia e sicurezza sono i capisaldi.
-                </p>
-              )}
-              {n === 3 && (
-                <p>
-                  Careisgold ha scelto <b>Argor-Heraeus Italia SpA</b> come
-                  partner...
-                  <br />
-                  Tracciabilità e liquidabilità garantite.
-                </p>
-              )}
-              {n === 4 && (
-                <p>
-                  Oro estratto senza agenti chimici inquinanti, rispettando
-                  ambiente e normative.
-                </p>
-              )}
-              {n === 5 && (
-                <p>
-                  I lingotti fino a 100gr sono dotati di tecnologia{" "}
-                  <b>Kinegram®</b> – sistema anti-contraffazione per la massima
-                  sicurezza.
-                </p>
-              )}
+            {n === 1 && <h2>Section 1</h2>}
+            {n === 2 && <h2>Section 2</h2>}
+            {n === 3 && <h2>Section 3</h2>}
+            {n === 4 && <h2>Section 4</h2>}
+            {n === 5 && <h2>Section 5</h2>}
+
+            {n === 1 && 
+            <div className="h-screen text-slate-50 flex items-start justify-center">
+              <h1 className="text-7xl">Section 1</h1>
             </div>
+            }
+            
+            {n === 2 && <Snippets>
+              {`
+              const Snippets = () => {
+                return (
+                  <div>
+                    <h1>Snippets</h1>
+                  </div>
+                );
+              };
+              `}
+            </Snippets>}
+            {n === 3 && <Snippets>
+              {`
+              const Snippets = () => {
+                return (
+                  <div>
+                    <h1>Snippets</h1>
+                  </div>
+                );
+              };
+              `}
+            </Snippets>}
           </div>
         </div>
       ))}
