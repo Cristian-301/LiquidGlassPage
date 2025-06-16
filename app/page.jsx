@@ -28,7 +28,9 @@ export default function Home() {
               url: '',
           }
         })}
-        <LandingPage />
+        <div className="w-full h-screen flex justify-center items-center bg-[#fefefe] z-50">
+
+        </div>
     </>
   );
 }
