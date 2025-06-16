@@ -34,8 +34,8 @@ export default function Snippets({ children, language = 'javascript', extraClass
                 {copied ? 'Copied!' : 'Copy'}
             </button>
 
-            <pre className="rounded-md overflow-x-auto">
-                <code ref={codeRef} className={`language-${language}`}>
+            <pre className="rounded-md overflow-x-auto  whitespace-pre-wrap">
+                <code ref={codeRef} className={`language-${language}  font-mono whitespace-pre-wrap`}>
                     {children}
                 </code>
             </pre>

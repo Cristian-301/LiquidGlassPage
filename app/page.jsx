@@ -1,5 +1,6 @@
 import { generateSEOMetadata, generateStructuredData } from "@/components/Metadata";
 import Snippets from "@/components/Snippets";
+import dedent from 'dedent';
 
 export const metadata = generateSEOMetadata({
   contentMetadata: {
@@ -28,22 +29,23 @@ export default function Home() {
               url: '',
           }
         })}
-        <Snippets language="javascript" extraClass="w-1/2">
-
-          
-  {`import {GlassCard} from '@developer-hub/liquid-glass'
+<Snippets language="javascript" extraClass="w-1/2">
+{dedent(`
+import {GlassCard} from '@developer-hub/liquid-glass'
 
 function App() {
-  return (
+  return 
+  (
     <GlassCard>
-      <div className="p-6">
-        <h2>Welcome to Liquid Glass</h2>
-        <p>Experience the future of UI design with smooth, organic animations.</p>
-      </div>
+        <div className="p-6">
+            <h2>Welcome to Liquid Glass</h2>
+            <p>Experience the future of UI design with smooth, organic animations.</p>
+        </div>
     </GlassCard>
   )
-}`}
-        </Snippets>
+}
+`)}
+</Snippets>
     </>
   );
 }
