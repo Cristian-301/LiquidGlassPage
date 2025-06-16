@@ -1,5 +1,5 @@
 import { generateSEOMetadata, generateStructuredData } from "@/components/Metadata";
-import MouseFollow from "@/components/MouseFollow";
+import LandingPage from "@/components/LandingPage";
 
 export const metadata = generateSEOMetadata({
   contentMetadata: {
@@ -28,9 +28,7 @@ export default function Home() {
               url: '',
           }
         })}
-        <div className="w-full h-screen flex justify-center items-center bg-[#fefefe] z-50">
-
-        </div>
+        <LandingPage />
     </>
   );
 }

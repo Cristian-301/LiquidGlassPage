@@ -830,6 +830,11 @@ video {
 .gap-y-16{
   row-gap: 4rem;
 }
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
 .overflow-hidden{
   overflow: hidden;
 }
@@ -887,6 +892,9 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+.border-white\/20{
+  border-color: rgb(255 255 255 / 0.2);
+}
 .bg-\[\#00418F\]{
   --tw-bg-opacity: 1;
   background-color: rgb(0 65 143 / var(--tw-bg-opacity));
@@ -894,10 +902,6 @@ video {
 .bg-\[\#ba953e\]{
   --tw-bg-opacity: 1;
   background-color: rgb(186 149 62 / var(--tw-bg-opacity));
-}
-.bg-\[\#fefefe\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 254 254 / var(--tw-bg-opacity));
 }
 .bg-black{
   --tw-bg-opacity: 1;
@@ -918,6 +922,10 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-yellow-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 .bg-zinc-200{
   --tw-bg-opacity: 1;
@@ -1174,6 +1182,9 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-white\/80{
+  color: rgb(255 255 255 / 0.8);
 }
 .opacity-0{
   opacity: 0;
@@ -2125,6 +2136,11 @@ img {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-yellow-300:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gradient-to-br:hover{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -2309,6 +2325,9 @@ img {
   .lg\:w-1\/2{
     width: 50%;
   }
+  .lg\:w-2\/3{
+    width: 66.666667%;
+  }
   .lg\:w-full{
     width: 100%;
   }
@@ -2339,9 +2358,16 @@ img {
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
+  .lg\:px-28{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
   .lg\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+  .lg\:pe-56{
+    padding-inline-end: 14rem;
   }
   .lg\:text-2xl{
     font-size: 1.5rem;
@@ -2349,6 +2375,10 @@ img {
   }
   .lg\:text-5xl{
     font-size: 3rem;
+    line-height: 1;
+  }
+  .lg\:text-6xl{
+    font-size: 3.75rem;
     line-height: 1;
   }
   .lg\:text-lg{

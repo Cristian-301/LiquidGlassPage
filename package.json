@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@developer-hub/liquid-glass": "^1.2.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
@@ -67,6 +68,7 @@
     "react": "18.2.0",
     "react-day-picker": "^8.10.1",
     "react-dom": "18.2.0",
+    "react-draggable": "^4.4.6",
     "react-hook-form": "^7.53.0",
     "react-icons": "^5.4.0",
     "react-just-parallax": "^3.1.16",
