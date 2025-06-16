@@ -36,7 +36,6 @@ export default function RootLayout({children,}) {
           <AOSInit />
           {/* <Navbar/> */}
           {children}
-          <Footer/>
         </LenisProvider>
       </body>
     </html>
