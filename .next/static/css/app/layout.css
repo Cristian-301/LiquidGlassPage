@@ -845,9 +845,6 @@ video {
 .overflow-x-hidden{
   overflow-x: hidden;
 }
-.whitespace-pre{
-  white-space: pre;
-}
 .whitespace-pre-wrap{
   white-space: pre-wrap;
 }
