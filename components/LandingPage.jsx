@@ -87,30 +87,15 @@ const ImageFollow = () => {
           position: "fixed",
           top: "50%",
           left: imageLeft,
-          width: 400,
           transform: `translate(-50%, -50%) ${
             rotateImage ? "rotateY(180deg)" : ""
           }`,
           transition: "left 1s ease, transform 1s",
         }}
+        cornerRadius={50}
         className=""
       >
-        <div className="flex flex-col items-center text-center space-y-4 p-5">
-          <Image
-            src="https://www.lorem-johnny.com/api/random-image"
-            alt="Kinegram Lingotto"
-            width={100}
-            height={100}
-            className="rounded-full border border-white/20 shadow-lg"
-          />
-          <h3 className="text-xl font-semibold text-white">Lingotto 100g</h3>
-          <p className="text-sm text-white/80">
-            Questo lingotto da 100g è protetto dalla tecnologia <b>Kinegram®</b>
-            , garantendo autenticità e sicurezza assoluta.
-          </p>
-          <button className="mt-4 px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-black font-medium transition">
-            Scopri di più
-          </button>
+        <div className="flex flex-col items-center text-center space-y-4 p-5 h-[30rem] w-[30rem]">
         </div>
       </GlassCard>
 
