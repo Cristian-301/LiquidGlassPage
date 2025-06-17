@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { GlassCard } from "@developer-hub/liquid-glass";
-import BgImage from "@/public/assets/herosection/4.png";
+import BgImage from "@/public/assets/herosection/11.png";
 import Snippets from "@/components/Snippets";
 
 const ImageFollow = () => {
   const containerRef = useRef(null);
-  const [imageLeft, setImageLeft] = useState("10%");
+  const [imageLeft, setImageLeft] = useState("120%");
   const [rotateImage, setRotateImage] = useState(false);
   const [width, setWidth] = useState(0);
+  const [isEnteringSection1, setIsEnteringSection1] = useState(false);
+
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -27,6 +28,12 @@ const ImageFollow = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.id;
+
+            if (id === "section1") {
+              setIsEnteringSection1(true);
+              setTimeout(() => setIsEnteringSection1(false), 1000); // Reset after animation
+            }          
+
             const left = [
               "section1",
               "section3",
@@ -78,7 +85,6 @@ const ImageFollow = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Fixed image */}
 
       {/* GlassCard */}
       <GlassCard
@@ -89,8 +95,10 @@ const ImageFollow = () => {
           left: imageLeft,
           transform: `translate(-50%, -50%) ${
             rotateImage ? "rotateY(180deg)" : ""
-          }`,
-          transition: "left 1s ease, transform 1s",
+          } ${isEnteringSection1 ? "translateX(0vw)" : ""}`,
+          transition: isEnteringSection1
+          ? "transform 3s ease-out, left 3s ease"
+          : "left 1s ease, transform 1s ease",
         }}
         cornerRadius={50}
         className=""
@@ -108,16 +116,15 @@ const ImageFollow = () => {
             n % 2 === 0 ? "justify-start" : "justify-end"
           }`}
         >
-          <div className="w-full lg:w-2/3 text-left lg:pe-56 lg:px-28 p-4">
-            {n === 1 && <h2>Section 1</h2>}
+          <div className="w-full p-4">
             {n === 2 && <h2>Section 2</h2>}
             {n === 3 && <h2>Section 3</h2>}
             {n === 4 && <h2>Section 4</h2>}
             {n === 5 && <h2>Section 5</h2>}
 
             {n === 1 && 
-            <div className="h-screen text-slate-50 flex items-start justify-center">
-              <h1 className="text-7xl">Section 1</h1>
+            <div className="w-full text-center mx-auto p-4 text-slate-50">
+              <h1 className="text-[12rem] font-bold uppercase nowrap">Liquid Glass</h1>
             </div>
             }
             
