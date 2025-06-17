@@ -17,7 +17,7 @@ export default function HeroSection({backgroundImg, title, description, buttonNa
       
         <div className="h-screen bg-black z-30 relative opacity-50"/>
           <Image
-             src={backgroundImg}
+             src="https://picsum.photos/200/300"
              alt="background"
              className="absolute top-0 left-0 w-full h-full object-cover"
              width={600}
