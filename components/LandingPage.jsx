@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { GlassCard } from "@developer-hub/liquid-glass";
-import BgImage from "@/public/assets/herosection/surf.png";
+import BgImage from "@/public/assets/herosection/16.jpg";
 import Snippets from "@/components/Snippets";
 
 const ImageFollow = () => {
@@ -83,9 +83,9 @@ const ImageFollow = () => {
       className="z-40"
       style={{
         backgroundImage: `url(${BgImage.src})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPosition: "center",
-        // backgroundRepeat: "no-repeat",
+        backgroundRepeat: "no-repeat",
       }}
     >
 
