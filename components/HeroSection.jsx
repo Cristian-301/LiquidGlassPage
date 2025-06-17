@@ -6,12 +6,7 @@ import BgImage from "@/public/assets/herosection/22.png";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const [showCard, setShowCard] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setShowCard(true), 1000);
-    return () => clearTimeout(timeout);
-  }, []);
+  const [showCard, setShowCard] = useState(true);
 
   return (
     <div
@@ -36,7 +31,7 @@ export default function HeroSection() {
         whileTap={{ cursor: "grabbing" }}
         initial={{ x: 1000, y: '-50%'}}
         animate={showCard ? { x: '-50%', y: '-50%' } : {}}
-        transition={{ duration: 3, ease: 'easeInOut' }}
+        transition={{ duration: 2, ease: 'easeInOut' }}
         style={{
           position: "absolute",
           top: "50%",
