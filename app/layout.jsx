@@ -1,6 +1,7 @@
 import './globals.css';
 import LenisProvider from '@/components/LenisProvider';
 import { generateSEOMetadata } from "@/components/Metadata";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = generateSEOMetadata({
   contentMetadata: {
@@ -38,6 +39,7 @@ export default function RootLayout({children,}) {
   return (
     <html lang="it">
       <body className={""}>
+        <Analytics />
         <LenisProvider>
           {children}
         </LenisProvider>

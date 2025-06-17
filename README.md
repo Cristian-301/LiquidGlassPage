@@ -4,6 +4,10 @@ A minimal, high-performance **Next.js** template optimized for generating static
 
 ---
 
+## ✨ DEMO
+
+See the preview [here](https://liquid-glass-js.com/)
+
 ## ✨ Features
 
 * ✅ **SEO-ready** via `Metadata.jsx` helper
