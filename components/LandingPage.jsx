@@ -109,7 +109,7 @@ const ImageFollow = () => {
         ) : currentSection === "section4" ? (
           <div className="flex flex-col justify-center items-center space-y-4 p-5">
             <h3 className="text-3xl font-bold text-white">Card with Shadow Mode</h3>
-            <Image src="https://www.lorem-johnny.com/api/random-image" width={300} height={300} className="object-contain"/>
+            <Image src="assets/doctor.jpg" width={200} height={200} className="object-contain"/>
             <p className="text-lg text-white">
               You know who this is. Don't pretend you don't know, you silly goose.
             </p>
@@ -120,7 +120,7 @@ const ImageFollow = () => {
           </div>
         ) : (
           <div className="flex flex-col justify-center items-center space-y-4 p-5">
-            <Image src="https://www.lorem-johnny.com/api/random-image" width={150} height={150} className="object-contain rounded-full"/>
+            <Image src="assets/doctor.jpg" width={150} height={150} className="object-contain rounded-full"/>
             <h3 className="text-3xl font-bold text-black">Default card</h3>
             <p className="text-lg text-black">
               A sleek glass-style card with built-in animations. Use this as a
